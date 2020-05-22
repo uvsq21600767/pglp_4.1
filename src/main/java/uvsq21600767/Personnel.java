@@ -1,6 +1,6 @@
 package uvsq21600767;
 
-public final class Personnel {
+public final class Personnel implements InterfacePersonnel {
     private final String nom;
     private final String prenom;
     private final java.time.LocalDate dateNaissance;
@@ -42,5 +42,14 @@ public final class Personnel {
         dateNaissance = build.dateNaissance;
         tel = build.tel;
         fonction = build.fonction;
+    }
+
+    @Override
+    public void print() {
+        System.out.println("Nom : " + this.nom);
+        System.out.println("Prenom : " + this.prenom);
+        System.out.println("Date de naissance : " + this.dateNaissance);
+        System.out.println("Telephone : " + this.tel);
+        System.out.println("Fonction : " + this.fonction);
     }
 }
